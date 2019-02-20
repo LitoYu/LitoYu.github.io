@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+    
+    
+    <entry>
+        <title><![CDATA[认识Python]]></title>
+        <url>http://yoursite.com/2019/02/20/%E8%AE%A4%E8%AF%86Python/</url>
+        <content type="html"><![CDATA[<h2 id="一、第一个Python程序"><a href="#一、第一个Python程序" class="headerlink" title="一、第一个Python程序"></a>一、第一个Python程序</h2><h3 id="1-常用快捷键"><a href="#1-常用快捷键" class="headerlink" title="1. 常用快捷键"></a>1. 常用快捷键</h3><p>Ctrl + s      保存<br>Ctrl + /      添加或者取消单行注释<br>Ctrl + v      粘贴<br>Ctrl + x      剪切<br>Ctrl + z      撤销<br>Ctrl + shift + z      反撤销<br>Ctrl + a      全选<br>Ctrl + f      查找<br>Ctrl + r      替换<br>Ctrl + shift + f10   执行<br>按住 option(alt)不放，可以让编辑区同时出现多个光标</p>
+<h3 id="2-print"><a href="#2-print" class="headerlink" title="2. print"></a>2. print</h3><p>print是一个函数,功能是在控制台打印它后边括号里面的内容<br>例如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(&apos;hello world!&apos;)</span><br><span class="line">print(100)</span><br></pre></td></tr></table></figure></p>
+<p>执行效果：<br><img src="https://upload-images.jianshu.io/upload_images/15578485-5c6eeb18b8ba7b25.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="执行效果"></p>
+<h2 id="二、-Python-基础语法"><a href="#二、-Python-基础语法" class="headerlink" title="二、 Python 基础语法"></a>二、 Python 基础语法</h2><h3 id="1-注释"><a href="#1-注释" class="headerlink" title="1. 注释"></a>1. 注释</h3><p>程序中的说明文字，没有任何程序功能，不会被执行。<br>单行注释，就是在说明文字前加 # 号<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">name = &apos;yulei&apos;</span><br><span class="line">age = 18 #这是一个变量</span><br></pre></td></tr></table></figure></p>
+<p>多行注释：将说明文字放在三个双引号或者三个单引号之间 （一般使用三个双引号）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line"> 我是第一行注释</span><br><span class="line"> 我是第二行注释</span><br><span class="line">&quot;&quot;&quot;</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-标识符"><a href="#2-标识符" class="headerlink" title="2. 标识符"></a>2. 标识符</h3><p>标识符是程序中用来给变量、函数或者类命名用的。<br>python对标识符的要求(python2.x): 必须是由字母、数字、下划线组成，并且数字不能开头!<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">abc = 100</span><br><span class="line">abc123 = 100</span><br><span class="line">abc_ = 100</span><br><span class="line">a_b = 100</span><br><span class="line">ab_12 = 100</span><br><span class="line"># 12abc = 100   # 错误！ SyntaxError: invalid syntax</span><br><span class="line"># ab~c = 100    #  错误！ SyntaxError: invalid syntax</span><br></pre></td></tr></table></figure></p>
+<p>注意：理论在python3.x里面标识符中可以包含除了ASCII码表以外的其他字符,(可以包含中文), 但是实际开发的时候还是按照python2.x的要求来</p>
+<h3 id="3-关键字-保留字"><a href="#3-关键字-保留字" class="headerlink" title="3. 关键字(保留字)"></a>3. 关键字(保留字)</h3><p>python保留下来用来表示一些特殊功能或者特殊意义的一些标识符，就是python的关键字(保留字)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line">&apos;False&apos;, &apos;None&apos;, &apos;True&apos;, &apos;and&apos;, &apos;as&apos;, &apos;assert&apos;, &apos;break&apos;, </span><br><span class="line">&apos;class&apos;, &apos;continue&apos;, &apos;def&apos;, &apos;del&apos;, &apos;elif&apos;, &apos;else&apos;, &apos;except&apos;, </span><br><span class="line">&apos;finally&apos;, &apos;for&apos;, &apos;from&apos;, &apos;global&apos;, &apos;if&apos;, &apos;import&apos;, &apos;in&apos;, &apos;is&apos;, </span><br><span class="line">&apos;lambda&apos;, &apos;nonlocal&apos;, &apos;not&apos;, &apos;or&apos;, &apos;pass&apos;, &apos;raise&apos;, &apos;return&apos;, &apos;try&apos;, </span><br><span class="line">&apos;while&apos;, &apos;with&apos;, &apos;yield&apos;</span><br><span class="line">import keyword     # 导入python的标准库keyword</span><br><span class="line">print(keyword.kwlist)     # 打印python中所有的关键字</span><br><span class="line"></span><br><span class="line"># and = 100   # 不能使用关键字命名</span><br><span class="line"></span><br><span class="line">&quot;&quot;&quot;</span><br></pre></td></tr></table></figure></p>
+<h3 id="4-数据类型和字面量"><a href="#4-数据类型和字面量" class="headerlink" title="4. 数据类型和字面量"></a>4. 数据类型和字面量</h3><p> python中常用的数据类型有：<br><strong>整型(int):</strong> 包含所有的整数,例如：100， 99， -20， 0<br><code>num = 100</code><br><strong>浮点型(float):</strong> 包含所有的小数, 例如：100.0， 12.5， -3.14<br><code>num = 12.5</code><br><strong>复数型(complex):</strong> 包含所有的虚数,实部+虚部, 例如：10+1j, 10-10j<br><code>num = 10+2j</code><br><strong>布尔类型(bool):</strong>只有两种结束的数据（是/不是, 是/否，真/假，确定/不确定)<br>只有两个值，分别是True,False。True(确定、真、是), False(假、否定)<br><strong>字符串(str):</strong> 程序中的文本数据，值是通过单引号或者双引号将文本括起来， ‘hello’、”你好吗？”<br>示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">num = &apos;你好吗？&apos;</span><br><span class="line">num = &quot;how are you?&quot;</span><br></pre></td></tr></table></figure></p>
+<p>获取数据对应的类型<br>type(数据)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(type(10+1j))</span><br><span class="line">print(type(0.12))</span><br></pre></td></tr></table></figure></p>
+<h3 id="5-缩进"><a href="#5-缩进" class="headerlink" title="5. 缩进"></a>5. 缩进</h3><p>在写python程序的时候，每条语句前的空格的个数是有严格的规范的，不能随便加空格，<br>也不能在必须有空格的时候少写空格<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#     print(&apos;hello world&apos;)   #  IndentationError: unexpected indent</span><br></pre></td></tr></table></figure></p>
+<h3 id="6-print和input函数"><a href="#6-print和input函数" class="headerlink" title="6. print和input函数"></a>6. print和input函数</h3><h4 id="a-print函数"><a href="#a-print函数" class="headerlink" title="a. print函数"></a>a. print函数</h4><p>控制台输入函数。可以在控制台输入print后面的括号里面的所有内容</p>
+<ul>
+<li>用法一：print(数据)，print(变量)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">print(100)</span><br><span class="line">print(&apos;hello world&apos;)</span><br><span class="line">print(True)</span><br><span class="line">print(num)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>运行效果：<br><img src="https://upload-images.jianshu.io/upload_images/15578485-d89e7ee532a25e0e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="运行效果"></p>
+<ul>
+<li><p>用法二：print(数据1，数据2，数据3….) - 在一行打印多个数据，数据之间用逗号隔开<br><code>print(100, 12.5, &#39;abc&#39;)</code><br>运行效果：<br><img src="https://upload-images.jianshu.io/upload_images/15578485-ef3c670a538f787f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="运行效果"></p>
+<ul>
+<li>用法三：自定义结尾(默认是换行)和多个内容之间的间隔(默认是空格)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">print(&apos;第一行内容&apos;, end=&apos;$&apos;)</span><br><span class="line">print(&apos;第二行内容&apos;, end=&apos;~&apos;)</span><br><span class="line">print(&apos;第三行内容&apos;)</span><br><span class="line"></span><br><span class="line">print(100, 12.5, &apos;abc&apos;, sep=&apos;;&apos;)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<p>运行效果：<br><img src="https://upload-images.jianshu.io/upload_images/15578485-1af241148440ad5e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="运行效果"></p>
+<h4 id="b-input函数"><a href="#b-input函数" class="headerlink" title="b.input函数"></a>b.input函数</h4><p> 获取从控制台输入的内容， 输入的时候以回车<br>input(提示信息)</p>
+<ul>
+<li>注意：当程序执行到input的时候，程序会停下来等待用户输入，直到输入完成才会接着往下执行<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">content = input(&apos;请输入:&apos;)  # 从控制输入内容，给content</span><br><span class="line">print(content, type(content))</span><br><span class="line">print(&apos;======&apos;)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>运行效果：<br><img src="https://upload-images.jianshu.io/upload_images/15578485-d45c1fb4512ac62d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="运行效果"></p>
+<h2 id="三、变量"><a href="#三、变量" class="headerlink" title="三、变量"></a>三、变量</h2><h3 id="1-什么是变量？"><a href="#1-什么是变量？" class="headerlink" title="1. 什么是变量？"></a>1. 什么是变量？</h3><p>变量是程序中用来保存数据的容器</p>
+<h3 id="2-怎么声明变量？"><a href="#2-怎么声明变量？" class="headerlink" title="2. 怎么声明变量？"></a>2. 怎么声明变量？</h3><p>基本语法： 变量名 = 值</p>
+<ul>
+<li>说明：<ul>
+<li><strong>变量名</strong> - 程序员自己命名的。<ul>
+<li><em>要求</em>：是标识符，不能是关键字</li>
+<li><em>规范</em>：<ul>
+<li>a. 遵循pep8命名规范，所有的字母小写，如果是有多个单词组成，单词之间用下划线隔开</li>
+<li>b.见名知义（看见变量名就要知道这个变量中到底存的是什么数据）</li>
+<li><strong>=</strong>    - 赋值符号，将=右边的值赋给左边的变量</li>
+<li><strong>值</strong>   - 所有有结果的表达式都可以作为值（可以是一个数据，也可以是其他变量，还可以是一个运算结果等）<h4 id="a-单独声明一个变量"><a href="#a-单独声明一个变量" class="headerlink" title="a.单独声明一个变量"></a>a.单独声明一个变量</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dog_name = &apos;旺财&apos;</span><br><span class="line">print(dog_name)</span><br><span class="line">age = 18</span><br><span class="line">num = 34</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="b-同时声明多个变量，赋相同的值"><a href="#b-同时声明多个变量，赋相同的值" class="headerlink" title="b.同时声明多个变量，赋相同的值"></a>b.同时声明多个变量，赋相同的值</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">num1 = num2 = num3 = 10</span><br><span class="line">print(num1,num2,num3)</span><br><span class="line">#</span><br><span class="line">name,age,sex = &apos;小明&apos;,20,&apos;男&apos;,</span><br><span class="line">print(name,age,sex)</span><br></pre></td></tr></table></figure>
+<p>运行效果：<br><img src="https://upload-images.jianshu.io/upload_images/15578485-9306896a4944f2cc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>Python中一行如果要写多条语句，多条语句之间必须加 ;号<br><code>name2 = &#39;张三&#39; ; age2 = 20</code></p>
+<h3 id="3-注意事项"><a href="#3-注意事项" class="headerlink" title="3.注意事项"></a>3.注意事项</h3><ul>
+<li>a.变量必须先赋值再使用</li>
+<li><p>b.重复给同一个变量赋值，后面的值会覆盖前面的值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = 10</span><br><span class="line">a = 20</span><br><span class="line">print(a)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>c.同一个变量可以赋不同类型的值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">num = 100</span><br><span class="line">print(type(num))</span><br><span class="line">num = &apos;abc&apos;</span><br><span class="line">print(type(num))</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong><em>python声明变量和给变量赋值的原理：先在内存中开辟空间储存数据，然后将数据的地址存到变量中</em></strong></p>
+<h2 id="四、内存"><a href="#四、内存" class="headerlink" title="四、内存"></a>四、内存</h2><p>1位只能储存 1/0<br>8位(bit) = 1字节（byte）<br>1024字节 = 1kb<br>1024kb = 1M<br>1024 M = 1G<br>1024 G = 1</p>
+</li>
+</ul>
+]]></content>
+        
+        <categories>
+            
+            <category> Python学习 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> 学习 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    
+    
+</search>
